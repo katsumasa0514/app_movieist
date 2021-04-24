@@ -6,6 +6,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('portfolio', views.portfolio, name='portfolio'),
     path('movieselect', views.movieselect, name='movieselect'),
     path('overview/<int:movie_id>/', views.overview, name='overview'),
     path('overview/<int:movie_id>/review', views.review, name='review'),

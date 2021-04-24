@@ -101,16 +101,16 @@
                                                 <p style="margin: 0px; text-align: left;">
                                                     {{genre.comment}}
                                                 </p>
-                                                <button v-if="toggle === {{ forloop.counter }}" @click="toggleBtn(0)"
+						<a v-if="toggle === {{ forloop.counter }}" @click="toggleBtn(0)"
                                                     style="padding: 0px; border: 0px; background-color: white; font-size: calc(20px + 1vw); height: 0px;">
                                                     <b-icon icon="chevron-compact-up" aria-hidden="true">
                                                     </b-icon>
-                                                </button>
-                                                <button v-else @click="toggleBtn({{ forloop.counter }})"
+                                                </a>
+                                                <a v-else @click="toggleBtn({{ forloop.counter }})"
                                                     style="padding: 0px; border: 0px; background-color: white; font-size: calc(20px + 1vw); height: 0px;">
                                                     <b-icon icon="chevron-compact-down" aria-hidden="true">
                                                     </b-icon>
-                                                </button>
+                                                </a>
                                             </div>
                                             <div v-else cols="12"
                                                 style="font-size: 13px; text-align: center; padding: 5px 0; height: 150px;">
@@ -118,16 +118,16 @@
                                                     style="overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; text-align: left; margin: 0px;">
                                                     {{genre.comment}}
                                                 </p>
-                                                <button v-if="toggle === {{ forloop.counter }}" @click="toggleBtn(0)"
+						<a v-if="toggle === {{ forloop.counter }}" @click="toggleBtn(0)"
                                                     style="padding: 0px; border: 0px; background-color: white; font-size: calc(20px + 1vw); height: 0px;">
                                                     <b-icon icon="chevron-compact-up" aria-hidden="true">
                                                     </b-icon>
-                                                </button>
-                                                <button v-else @click="toggleBtn({{ forloop.counter }})"
+                                                </a>
+                                                <a v-else @click="toggleBtn({{ forloop.counter }})"
                                                     style="padding: 0px; border: 0px; background-color: white; font-size: calc(20px + 1vw); height: 0px;">
                                                     <b-icon icon="chevron-compact-down" aria-hidden="true">
                                                     </b-icon>
-                                                </button>
+                                                </a>
                                             </div>
                                         </b-card>
                                     </b-row>

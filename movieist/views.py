@@ -100,7 +100,7 @@ def homepage(request):
 
 def reviewer_ranking(request):
     rankingDataOrg = Follow.objects.values('owner').annotate(total=Count(
-        'follower')).order_by('-total')
+        'follower')).order_by('-total')[:500]
     rankingData = list((add_ranking_info(request, ranking) for ranking in rankingDataOrg))
 
     page_obj = paginate_queryset(request, rankingData, 20)
@@ -139,7 +139,7 @@ def search(request, genre):
         return redirect(url)
 
     if (genre == "allgenre"):
-        genreDataOrg = Review.objects.order_by('-countgood')
+        genreDataOrg = Review.objects.order_by('-countgood')[:1000]
         genreData = list((add_review_info(review) for review in genreDataOrg))
 
         page_obj = paginate_queryset(request, genreData, 20)
@@ -690,3 +690,6 @@ def paginate_queryset(request, queryset, count):
     except EmptyPage:
         page_obj = paginator.page(paginator.num_pages)
     return page_obj
+
+def portfolio(request):
+    return render(request, 'movieist/portfolio.html')

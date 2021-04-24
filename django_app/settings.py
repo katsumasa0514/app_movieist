@@ -27,7 +27,7 @@ SECRET_KEY = '4ah_sg3uf&z22)3cb23@yox0s+*62v00858n(du+&^1+p130b+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['katsu-portfolio.com', '52.196.17.172']
 
 DJANGO_SETTINGS_MODULE = "mysite.settings"
 
@@ -94,7 +94,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'movieist',
-        'USER': 'root',
+        'USER': 'katsumasa',
         'PASSWORD': 'nawa0514',
         'HOST': 'localhost',
         'POST': '3306',
@@ -143,6 +143,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
